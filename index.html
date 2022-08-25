@@ -339,15 +339,28 @@
             name="_next"
             value="https://arango34.github.io/kevinarango/thankyou.html"
           />
-          <input type="text" name="name" placeholder="Name" required />
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            class="name-input"
+            required
+          />
           <input
             type="email"
             name="email"
             placeholder="Email Address"
+            class="email-input"
             required
           />
-          <textarea name="message" placeholder="Message" required></textarea>
-          <button type="submit">Send Message</button>
+          <textarea
+            name="message"
+            placeholder="Message"
+            class="message-input"
+            required
+          ></textarea>
+          <p class="loading-text bolder hidden">Loading...</p>
+          <button type="submit" class="btn-submit">Send Message</button>
         </div>
       </form>
     </section>

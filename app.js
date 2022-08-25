@@ -112,3 +112,15 @@ descBtns.forEach((btn) => {
 downIcons.forEach((icon) => {
   icon.addEventListener('click', showDesc);
 });
+
+const btn = document.querySelector('.btn-submit');
+const loadingText = document.querySelector('.loading-text');
+const nameInput = document.querySelector('.name-input');
+const email = document.querySelector('.email-input');
+const message = document.querySelector('.message-input');
+
+btn.addEventListener('click', () => {
+  if (!nameInput.value || !email.value || !message.value) return;
+  btn.classList.add('hidden');
+  loadingText.classList.remove('hidden');
+});
