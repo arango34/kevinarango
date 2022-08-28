@@ -527,7 +527,7 @@ header {
 }
 #projects {
   background: var(--clr-white);
-  padding: 2rem 0;
+  padding: 2rem 1rem;
   padding-bottom: 3rem;
 }
 .gem {
@@ -622,27 +622,30 @@ footer p {
 }
 
 .projects-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-around;
-  width: 30rem;
   margin: 0 auto;
+}
+
+.project-container {
+  width: 24.5rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+  /* border: 1px solid; */
 }
 
 .project {
   padding: 1rem;
   padding-bottom: 0.5rem;
-  margin-bottom: 2.5rem;
+  /* width: 22.5rem; */
   background-color: var(--clr-grey-10);
   box-shadow: var(--light-shadow);
   border-radius: 0.5rem;
+  margin: 0 auto;
+  margin-bottom: 2.5rem;
 }
 
 .screenshot-container {
   position: relative;
   margin: 0 auto;
-  height: 13rem;
   margin-bottom: 1.5rem;
   border: 1px solid var(--clr-grey-9);
   border-radius: 0.25rem;
@@ -672,16 +675,10 @@ footer p {
   vertical-align: top;
 }
 
-.project-title-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 0.5rem;
-}
-
 .project-title {
   margin-bottom: 0.25rem;
   font-size: 1.5rem;
+  white-space: nowrap;
 }
 
 .project-footer {
@@ -734,11 +731,15 @@ footer p {
 }
 
 .description-container {
-  width: 366px;
+  /* width: 366px; */
   height: 0;
   overflow: hidden;
   transition: height 0.5s ease-in-out;
 }
+
+/* .description-container {
+  width: 309px;
+} */
 
 .description {
   padding-top: 2rem;
@@ -906,9 +907,9 @@ footer p {
 }
 
 @media screen and (min-width: 900px) {
-  .projects-container {
+  /* .projects-container {
     min-width: 55rem;
-  }
+  } */
 
   .about-me {
     padding: 2rem 8rem;
@@ -916,20 +917,26 @@ footer p {
 }
 
 @media screen and (min-width: 1250px) {
-  .projects-container {
-    min-width: 90%;
-  }
-
-  .screenshot-container {
-    height: 11rem;
-  }
-
-  .description-container {
-    width: 309px;
-  }
-
   .skill-container {
     flex-basis: 0;
     margin-bottom: 0;
   }
+}
+
+@media screen and (min-width: 800px) {
+  .projects-container {
+    min-width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  .screenshot-container {
+    /* height: 11rem; */
+  }
+
+  /* .description-container {
+    width: 309px;
+  } */
 }
